@@ -6,9 +6,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import {MultiTranslateHttpLoader} from 'ngx-translate-multi-http-loader';
 
-export function rootLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
+
+// export function rootLoaderFactory(http: HttpClient) {
+//   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
+// }
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new MultiTranslateHttpLoader(httpClient, [
+      {prefix: "./assets/i18n/", suffix: ".json"},
+      {prefix: "./assets/i18n/testando/", suffix: ".json"},
+  ]);
 }
 
 
@@ -25,7 +35,8 @@ export function rootLoaderFactory(http: HttpClient) {
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: rootLoaderFactory,
+        // useFactory: rootLoaderFactory,
+        useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
 

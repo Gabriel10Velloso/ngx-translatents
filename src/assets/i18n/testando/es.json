@@ -1,0 +1,12 @@
+{
+    "home2": {
+        "title": "Pagina2 principal",
+        "welcome_text": "Haz2 que la gente se enamore de tus ideas",
+        "email_text": "Email es com {{email}}",
+        "sun_text": "Cuando el valor {{value}} agregado al valor {{value2}} = "
+    },
+
+    "settings2": {
+        "title": "Página de configuración"
+    }
+}

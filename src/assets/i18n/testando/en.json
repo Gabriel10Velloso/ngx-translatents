@@ -1,0 +1,13 @@
+{
+    "home2": {
+        "title": "Home2 Page",
+        "welcome_text": "Make2 people fall in love with your ideas",
+        "email_text": "Email us as {{email}}",
+        "sun_text": "When de value {{value}} added to value {{value2}} = "
+
+    },
+
+    "settings2": {
+        "title": "Setting Page"
+    }
+}
