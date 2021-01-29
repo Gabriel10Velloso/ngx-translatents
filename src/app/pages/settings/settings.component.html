@@ -1,1 +1,7 @@
-<p>settings works!</p>
+<h1 translate>settings.title</h1>
+<button (click)="changeLanguage('pt')">Portugues</button>
+<button (click)="changeLanguage('es')">Espanhol</button>
+<button (click)="changeLanguage('en')">Inglês</button>
+
+
+<a [routerLink]="['']" translate>settings.title</a>

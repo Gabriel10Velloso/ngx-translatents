@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateConfigService } from 'src/app/services/translate-config.service';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  email = 'gabriel@teste.com'
+  a = 1;
+  b = 2;
+  constructor(private translateConfigService: TranslateConfigService) { }
 
   ngOnInit(): void {
   }

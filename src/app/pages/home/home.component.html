@@ -1,1 +1,8 @@
-<p>home works!</p>
+<h1 translate>home.title</h1>
+<h2 translate>home.welcome_text</h2>
+
+<p [innerHTML]=" 'home.email_text' | translate: {email: email} "></p>
+
+<span [innerHTML]=" 'home.sun_text' | translate: {value: a,  value2: b} "></span> {{a+b}}
+
+<a [routerLink]="['settings']" translate>settings.title</a>
